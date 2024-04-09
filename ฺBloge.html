@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog and News</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+    <style>
+
+        .container {
+            width: 100%;
+            max-width: none;
+        }
+
+        .card {
+            width: 100%;
+        }
+
+        body {
+            background-color: #ffffff; /* เปลี่ยนสีพื้นหลังของ body เป็นสีเทาดำ */
+        }
+    
+        .navbar {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+    
+        .card:hover {
+            transform: translateY(-5px);
+        }
+    
+        .card-footer {
+            background-color: #f8f9fa;
+        }
+    
+        .form-group textarea {
+            resize: none;
+        }
+    
+        .list-unstyled {
+            padding-left: 0;
+        }
+    
+        .navbar {
+            margin-bottom: 20px;
+        }
+    
+        .card {
+            margin-bottom: 20px;
+        }
+    
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 0;
+        }
+    
+        .comment-section {
+            margin-top: 20px;
+        }
+    
+        .comment-section ul {
+            padding-left: 0;
+        }
+    
+        .comment-section ul li {
+            list-style: none;
+            margin-bottom: 5px;
+        }
+    
+        .comment-section form {
+            margin-top: 20px;
+        }
+    
+        @media (max-width: 768px) {
+            .card {
+                width: 100%;
+            }
+        }
+    
+        /* Additional CSS for full-width content */
+        .container {
+            width: 90%;
+            max-width: none;
+        }
+    
+        .card {
+            width: 100%;
+        }
+        .carousel-control-prev, .carousel-control-next {
+        width: 3rem; /* ปรับขนาดของปุ่ม */
+        height: 100%;
+        top: 0; /* ทำให้ปุ่มอยู่ตรงกลางตามความสูงของเนื้อหา */
+        background-color: transparent; /* กำหนดสีพื้นหลังเป็นโปร่งใส */
+        border: none; /* ลบเส้นขอบของปุ่ม */
+    }
+
+    .carousel-control-prev {
+        left: 0; /* ปุ่ม prev อยู่ด้านซ้ายของเนื้อหา */
+    }
+
+    .carousel-control-next {
+        right: 0; /* ปุ่ม next อยู่ด้านขวาของเนื้อหา */
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 2rem; /* ปรับขนาดของ icon */
+        height: 2rem; /* ปรับขนาดของ icon */
+        background-size: 100%, 100%;
+        background-color: transparent; /* กำหนดสีพื้นหลังเป็นโปร่งใส */
+        border: none; /* ลบเส้นขอบของ icon */
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"%3E%3Cpath fill-rule="evenodd" d="M11.354 3.354a.5.5 0 0 1 0 .707L7.707 8l3.647 3.646a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0z"/%3E%3C/svg%3E');
+    }
+
+    .carousel-control-next-icon {
+        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"%3E%3Cpath fill-rule="evenodd" d="M4.646 12.646a.5.5 0 0 1 0-.708L8.293 8l-3.647-3.646a.5.5 0 1 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708 0z"/%3E%3C/svg%3E');
+    }
+        
+    </style>
+</head>
+<body>
+<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Blog and News</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Blog Posts -->
+        <div class="col-lg-12 mr-3">
+            <h2 class="mb-4">Latest Posts</h2>
+            <!-- Post Carousel -->
+            <div id="postCarousel" class="carousel slide mb-4" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title 1</h5>
+                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Read More →</a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">News Title 1</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- Comment Section -->
+                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
+                                <ul class="list-unstyled">
+                                    <!-- Add comments here -->
+                                </ul>
+                                <!-- Comment Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment1">Add Comment</label>
+                                        <textarea class="form-control" id="comment1" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title 2</h5>
+                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Read More →</a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">News Title 2</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- Comment Section -->
+                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
+                                <ul class="list-unstyled">
+                                    <!-- Add comments here -->
+                                </ul>
+                                <!-- Comment Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment2">Add Comment</label>
+                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title 3</h5>
+                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Read More →</a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">News Title 3</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- Comment Section -->
+                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
+                                <ul class="list-unstyled">
+                                    <!-- Add comments here -->
+                                </ul>
+                                <!-- Comment Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment2">Add Comment</label>
+                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title 4</h5>
+                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Read More →</a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">News Title 4</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- Comment Section -->
+                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
+                                <ul class="list-unstyled">
+                                    <!-- Add comments here -->
+                                </ul>
+                                <!-- Comment Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment2">Add Comment</label>
+                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title 5</h5>
+                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Read More →</a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">News Title 5</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- Comment Section -->
+                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
+                                <ul class="list-unstyled">
+                                    <!-- Add comments here -->
+                                </ul>
+                                <!-- Comment Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment2">Add Comment</label>
+                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title 6</h5>
+                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Read More →</a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">News Title 6</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- Comment Section -->
+                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
+                                <ul class="list-unstyled">
+                                    <!-- Add comments here -->
+                                </ul>
+                                <!-- Comment Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment2">Add Comment</label>
+                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title 7</h5>
+                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Read More →</a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">News Title 7</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- Comment Section -->
+                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
+                                <ul class="list-unstyled">
+                                    <!-- Add comments here -->
+                                </ul>
+                                <!-- Comment Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment2">Add Comment</label>
+                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title">Post Title 8</h5>
+                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <a href="#" class="btn btn-primary">Read More →</a>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">News Title 8</h5>
+                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="card-footer">
+                                <!-- Comment Section -->
+                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
+                                <ul class="list-unstyled">
+                                    <!-- Add comments here -->
+                                </ul>
+                                <!-- Comment Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="comment2">Add Comment</label>
+                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more carousel items for additional posts -->
+                </div>
+                <a class=" carousel-control-prev" href="#postCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+                <a class=" carousel-control-next" href="#postCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only"></span>
+                </a>
+            </div>
+        </div>
+        <!-- Sidebar -->
+        
+    </div>
+</div>
+
+
+<div class=" mb-5"></div>
+<div class=" mb-5"></div>
+    <footer class="bg-dark text-white text-center py-3">
+    &copy; 2024 Blog and News
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Activate carousel for news
+        $('#newsCarousel').carousel({
+            interval: 5000, // Auto slide every 5 seconds
+        });
+
+        // Activate carousel for posts
+        $('#postCarousel').carousel({
+            interval: 5000, // Auto slide every 5 seconds
+        });
+
+        // Toggle navigation menu
+        $('.navbar-toggler').click(function() {
+            $('.navbar-collapse').toggleClass('show');
+        });
+
+        // Submit comment form
+        $('.card-footer form').submit(function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var comment = $(this).find('textarea').val(); // Get comment from textarea
+            var commentList = $(this).siblings('ul'); // Get the comment list
+            commentList.append('<li>' + comment + '</li>'); // Append the new comment to the list
+            $(this).find('textarea').val(''); // Clear textarea
+        });
+    });
+</script>
+
+</body>
+</html>
