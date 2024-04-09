@@ -59,7 +59,7 @@ p { line-height: 1.9; }
 
 .nav-item.active .tm-nav-link,
 .nav-item:hover .tm-nav-link {
-    color: #9CC;
+    color: rgba(246, 129, 148, 1);
 }
 
 /* Page Background */
