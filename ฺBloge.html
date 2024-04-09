@@ -1,464 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blog and News</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="style.css" rel="stylesheet">
-    <style>
+    <title>Diagoona - About Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+    <!-- https://fonts.google.com/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" /> <!-- https://getbootstrap.com/ -->
+    <link href="fontawesome/css/all.min.css" rel="stylesheet" /> <!-- https://fontawesome.com/ -->
+    <link href="css/templatemo-diagoona.css" rel="stylesheet" />
+    <!--
 
-        .container {
-            width: 100%;
-            max-width: none;
-        }
+TemplateMo 550 Diagoona
 
-        .card {
-            width: 100%;
-        }
+https://templatemo.com/tm-550-diagoona
 
-        body {
-            background-color: #ffffff; /* เปลี่ยนสีพื้นหลังของ body เป็นสีเทาดำ */
-        }
-    
-        .navbar {
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    
-        .navbar-brand {
-            font-size: 1.5rem;
-        }
-    
-        .card:hover {
-            transform: translateY(-5px);
-        }
-    
-        .card-footer {
-            background-color: #f8f9fa;
-        }
-    
-        .form-group textarea {
-            resize: none;
-        }
-    
-        .list-unstyled {
-            padding-left: 0;
-        }
-    
-        .navbar {
-            margin-bottom: 20px;
-        }
-    
-        .card {
-            margin-bottom: 20px;
-        }
-    
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #343a40;
-            color: #fff;
-            padding: 10px 0;
-        }
-    
-        .comment-section {
-            margin-top: 20px;
-        }
-    
-        .comment-section ul {
-            padding-left: 0;
-        }
-    
-        .comment-section ul li {
-            list-style: none;
-            margin-bottom: 5px;
-        }
-    
-        .comment-section form {
-            margin-top: 20px;
-        }
-    
-        @media (max-width: 768px) {
-            .card {
-                width: 100%;
-            }
-        }
-    
-        /* Additional CSS for full-width content */
-        .container {
-            width: 90%;
-            max-width: none;
-        }
-    
-        .card {
-            width: 100%;
-        }
-        .carousel-control-prev, .carousel-control-next {
-        width: 3rem; /* ปรับขนาดของปุ่ม */
-        height: 100%;
-        top: 0; /* ทำให้ปุ่มอยู่ตรงกลางตามความสูงของเนื้อหา */
-        background-color: transparent; /* กำหนดสีพื้นหลังเป็นโปร่งใส */
-        border: none; /* ลบเส้นขอบของปุ่ม */
-    }
-
-    .carousel-control-prev {
-        left: 0; /* ปุ่ม prev อยู่ด้านซ้ายของเนื้อหา */
-    }
-
-    .carousel-control-next {
-        right: 0; /* ปุ่ม next อยู่ด้านขวาของเนื้อหา */
-    }
-
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-        width: 2rem; /* ปรับขนาดของ icon */
-        height: 2rem; /* ปรับขนาดของ icon */
-        background-size: 100%, 100%;
-        background-color: transparent; /* กำหนดสีพื้นหลังเป็นโปร่งใส */
-        border: none; /* ลบเส้นขอบของ icon */
-    }
-
-    .carousel-control-prev-icon {
-        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"%3E%3Cpath fill-rule="evenodd" d="M11.354 3.354a.5.5 0 0 1 0 .707L7.707 8l3.647 3.646a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0z"/%3E%3C/svg%3E');
-    }
-
-    .carousel-control-next-icon {
-        background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor"%3E%3Cpath fill-rule="evenodd" d="M4.646 12.646a.5.5 0 0 1 0-.708L8.293 8l-3.647-3.646a.5.5 0 1 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708 0z"/%3E%3C/svg%3E');
-    }
-        
-    </style>
+-->
 </head>
+
 <body>
-<div class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Blog and News</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Blog</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
-<div class="container mt-5">
-    <div class="row">
-        <!-- Blog Posts -->
-        <div class="col-lg-12 mr-3">
-            <h2 class="mb-4">Latest Posts</h2>
-            <!-- Post Carousel -->
-            <div id="postCarousel" class="carousel slide mb-4" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Title 1</h5>
-                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="#" class="btn btn-primary">Read More →</a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">News Title 1</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer">
-                                <!-- Comment Section -->
-                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
-                                <ul class="list-unstyled">
-                                    <!-- Add comments here -->
-                                </ul>
-                                <!-- Comment Form -->
-                                <form>
-                                    <div class="form-group">
-                                        <label for="comment1">Add Comment</label>
-                                        <textarea class="form-control" id="comment1" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
+    <div class="tm-container">
+        <div>
+            <div class="tm-row pt-4">
+                <div class="tm-col-left">
+                    <div class="tm-site-header media">
+                        <i class="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i>
+                        <div class="media-body">
+                            <h1 class="tm-sitename text-uppercase">ChiangMai</h1>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Title 2</h5>
-                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="#" class="btn btn-primary">Read More →</a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">News Title 2</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer">
-                                <!-- Comment Section -->
-                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
-                                <ul class="list-unstyled">
-                                    <!-- Add comments here -->
-                                </ul>
-                                <!-- Comment Form -->
-                                <form>
-                                    <div class="form-group">
-                                        <label for="comment2">Add Comment</label>
-                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Title 3</h5>
-                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="#" class="btn btn-primary">Read More →</a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">News Title 3</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer">
-                                <!-- Comment Section -->
-                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
-                                <ul class="list-unstyled">
-                                    <!-- Add comments here -->
-                                </ul>
-                                <!-- Comment Form -->
-                                <form>
-                                    <div class="form-group">
-                                        <label for="comment2">Add Comment</label>
-                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Title 4</h5>
-                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="#" class="btn btn-primary">Read More →</a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">News Title 4</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer">
-                                <!-- Comment Section -->
-                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
-                                <ul class="list-unstyled">
-                                    <!-- Add comments here -->
-                                </ul>
-                                <!-- Comment Form -->
-                                <form>
-                                    <div class="form-group">
-                                        <label for="comment2">Add Comment</label>
-                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Title 5</h5>
-                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="#" class="btn btn-primary">Read More →</a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">News Title 5</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer">
-                                <!-- Comment Section -->
-                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
-                                <ul class="list-unstyled">
-                                    <!-- Add comments here -->
-                                </ul>
-                                <!-- Comment Form -->
-                                <form>
-                                    <div class="form-group">
-                                        <label for="comment2">Add Comment</label>
-                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Title 6</h5>
-                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="#" class="btn btn-primary">Read More →</a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">News Title 6</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer">
-                                <!-- Comment Section -->
-                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
-                                <ul class="list-unstyled">
-                                    <!-- Add comments here -->
-                                </ul>
-                                <!-- Comment Form -->
-                                <form>
-                                    <div class="form-group">
-                                        <label for="comment2">Add Comment</label>
-                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Title 7</h5>
-                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="#" class="btn btn-primary">Read More →</a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">News Title 7</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer">
-                                <!-- Comment Section -->
-                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
-                                <ul class="list-unstyled">
-                                    <!-- Add comments here -->
-                                </ul>
-                                <!-- Comment Form -->
-                                <form>
-                                    <div class="form-group">
-                                        <label for="comment2">Add Comment</label>
-                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="carousel-item">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">Post Title 8</h5>
-                                <img src="path/to/your/image.jpg" class="card-img-top" alt="Image description">
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <a href="#" class="btn btn-primary">Read More →</a>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">News Title 8</h5>
-                                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </div>
-                            <div class="card-footer">
-                                <!-- Comment Section -->
-                                <h6 class="card-subtitle mb-2 text-muted">Comments</h6>
-                                <ul class="list-unstyled">
-                                    <!-- Add comments here -->
-                                </ul>
-                                <!-- Comment Form -->
-                                <form>
-                                    <div class="form-group">
-                                        <label for="comment2">Add Comment</label>
-                                        <textarea class="form-control" id="comment2" rows="3"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Add more carousel items for additional posts -->
                 </div>
-                <a class=" carousel-control-prev" href="#postCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                </a>
-                <a class=" carousel-control-next" href="#postCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                </a>
+                <div class="tm-col-right">
+                    <nav class="navbar navbar-expand-lg" id="tm-main-nav">
+                        <button class="navbar-toggler toggler-example mr-0 ml-auto" type="button" data-toggle="collapse"
+                            data-target="#navbar-nav" aria-controls="navbar-nav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span><i class="fas fa-bars"></i></span>
+                        </button>
+                        <div class="collapse navbar-collapse tm-nav" id="navbar-nav">
+                            <ul class="navbar-nav text-uppercase">
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item active">
+                                    <a class="nav-link tm-nav-link" href="about.html">About <span
+                                            class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="services.html">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link tm-nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
+        </div>
+
+        
+        <main class="container my-5">
+            <div class="mb-4 rounded text-body-emphasis bg-body-secondary">
+                <div class="px-0" style="background: url();">
+                    <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+                    <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and
+                        efficiently about what’s most interesting in this post’s contents.</p>
+                    <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+                </div>
+            </div>
+        
+            <div class="row mb-2 justify-content-around gx-5">
+                <div class="col">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                            <h3 class="mb-0">Featured post</h3>
+                            <div class="mb-1 text-body-secondary">Nov 12</div>
+                            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                                additional content.</p>
+                            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                Continue reading
+                                <svg class="bi">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">Thumbnail</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                        <div class="col p-4 d-flex flex-column position-static">
+                            <strong class="d-inline-block mb-2 text-success-emphasis">Design</strong>
+                            <h3 class="mb-0">Post title</h3>
+                            <div class="mb-1 text-body-secondary">Nov 11</div>
+                            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                                additional content.</p>
+                            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                                Continue reading
+                                <svg class="bi">
+                                    <use xlink:href="#chevron-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="col-auto d-none d-lg-block">
+                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg"
+                                role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice"
+                                focusable="false">
+                                <title>Placeholder</title>
+                                <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
+                                    dy=".3em">Thumbnail</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <h3 class="mt-5">Comment</h3>
+            <form>
+                <div class="form-group">
+                    <label for="nameInput">Name</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="emailInput">Email</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="commentInput">Comment</label>
+                    <textarea class="form-control" id="commentInput" rows="3" placeholder="Enter your comment"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            
+        
+        </main>
+        
+
+        <div class="tm-row">
+            <div class="tm-col-left text-center">
+                <!-- <ul class="tm-bg-controls-wrapper">
+                    <li class="tm-bg-control active" data-id="0"></li>
+                    <li class="tm-bg-control" data-id="1"></li>
+                    <li class="tm-bg-control" data-id="2"></li>
+                </ul> -->
+            </div>
+            <div class="tm-col-right tm-col-footer">
+                <footer class="tm-site-footer text-right">
+                    <p class="mb-0">Copyright 2020 Diagoona Co.
+
+                        | Design: <a rel="nofollow" target="_parent" href="https://templatemo.com"
+                            class="tm-text-link">TemplateMo</a></p>
+                </footer>
             </div>
         </div>
-        <!-- Sidebar -->
-        
     </div>
-</div>
 
-
-<div class=" mb-5"></div>
-<div class=" mb-5"></div>
-    <footer class="bg-dark text-white text-center py-3">
-    &copy; 2024 Blog and News
-</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // Activate carousel for news
-        $('#newsCarousel').carousel({
-            interval: 5000, // Auto slide every 5 seconds
-        });
-
-        // Activate carousel for posts
-        $('#postCarousel').carousel({
-            interval: 5000, // Auto slide every 5 seconds
-        });
-
-        // Toggle navigation menu
-        $('.navbar-toggler').click(function() {
-            $('.navbar-collapse').toggleClass('show');
-        });
-
-        // Submit comment form
-        $('.card-footer form').submit(function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            var comment = $(this).find('textarea').val(); // Get comment from textarea
-            var commentList = $(this).siblings('ul'); // Get the comment list
-            commentList.append('<li>' + comment + '</li>'); // Append the new comment to the list
-            $(this).find('textarea').val(''); // Clear textarea
-        });
-    });
-</script>
-
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/jquery.backstretch.min.js"></script>
+    <script src="js/templatemo-script.js"></script> -->
 </body>
+
 </html>
