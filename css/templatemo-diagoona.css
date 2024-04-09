@@ -256,6 +256,9 @@ hr { border-top: 1px solid white; }
 }
 
 /*ิblog*/
+.contact-form {
+    width: 100%;
+}
 /* Contact */
 .form-control,
 textarea {    
